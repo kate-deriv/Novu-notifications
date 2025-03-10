@@ -12,16 +12,9 @@ import { join } from 'path';
     NovuModule,
     UsersModule,
     PurchaseModule,
-    ServeStaticModule.forRootAsync({
-      useFactory: () => {
-        return [
-          {
-            rootPath: join(__dirname, '..', 'swagger-static'),
-            serveRoot: '/swagger',
-          },
-        ];
-      },
-      inject: [],
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'swagger-static'),
+      serveRoot: '/swagger',
     }),
   ],
   controllers: [AppController],
