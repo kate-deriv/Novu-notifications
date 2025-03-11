@@ -15,7 +15,6 @@ export interface Notification {
   id: string;
   templateIdentifier: string;
   channel: string;
-  event: string;
   content: string;
   createdAt: string;
   seen: boolean;
@@ -30,7 +29,6 @@ export class NotificationTransformer {
       id: notification._id,
       templateIdentifier: notification.templateIdentifier,
       channel: notification.channel,
-      event: notification.event,
       content: notification.content,
       createdAt: notification.createdAt,
       seen: notification.seen,
