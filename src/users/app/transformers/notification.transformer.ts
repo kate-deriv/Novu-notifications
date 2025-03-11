@@ -17,7 +17,7 @@ export interface Notification {
   channel: string;
   event: string;
   content: string;
-  created_at: string;
+  createdAt: string;
   seen: boolean;
   read: boolean;
   transactionId: string;
@@ -32,7 +32,7 @@ export class NotificationTransformer {
       channel: notification.channel,
       event: notification.event,
       content: notification.content,
-      created_at: notification.createdAt,
+      createdAt: notification.createdAt,
       seen: notification.seen,
       read: notification.read,
       transactionId: notification.transactionId,
